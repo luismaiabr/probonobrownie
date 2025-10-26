@@ -1,0 +1,126 @@
+/* --- Container Principal da Página de Estoque --- */
+.stock-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Espaço maior entre as seções */
+}
+
+/* --- Estilo para cada Seção (Adicionar, Atualizar, Estoque Atual) --- */
+.stock-section {
+  border: 1px solid #e5e7eb; /* Borda cinza clara */
+  border-radius: 0.5rem; /* 8px */
+  padding: 1.5rem; /* 24px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Título de cada seção (ex: "Adicionar ao Estoque") --- */
+.section-title {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #1f2937;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Formulários dentro das seções --- */
+.stock-form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  align-items: flex-end; /* Alinha o botão com a base dos inputs */
+}
+
+@media (min-width: 768px) {
+  .stock-form {
+    /* Em telas maiores, 2 inputs e 1 botão */
+    grid-template-columns: 2fr 2fr 1fr;
+  }
+}
+
+/* --- Botão de ação (reutilizado de SellPage.css, mas garantido aqui) --- */
+.action-button {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: fit-content; /* Para alinhar corretamente no grid */
+}
+
+.action-button:hover {
+  background-color: #374151;
+}
+
+/* --- Lista de Estoque Atual --- */
+.stock-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Espaço entre os itens da lista */
+}
+
+.stock-item, .total-stock-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6; /* Separador sutil */
+}
+
+/* Remove a borda do último item */
+.stock-list > .stock-item:last-of-type {
+  border-bottom: none;
+}
+
+.stock-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stock-item-name {
+  font-weight: 500;
+  color: #111827;
+}
+
+.stock-item-type {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.stock-item-quantity {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: right;
+}
+
+.stock-item-quantity span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+.total-stock-row {
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  margin-top: 1rem;
+  border-bottom: none;
+  padding: 1.25rem;
+}
+
+.total-stock-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.total-stock-value {
+  font-weight: 700;
+  font-size: 1.5rem;
+}

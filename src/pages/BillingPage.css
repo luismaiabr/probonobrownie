@@ -1,0 +1,124 @@
+/* --- Main Container --- */
+.billing-page-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Header Section --- */
+.billing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.billing-title {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  margin: 0;
+}
+
+.search-input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  min-width: 250px;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Summary Cards Section --- */
+.summary-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.summary-card-title {
+  font-size: 0.875rem; /* 14px */
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card-value {
+  font-size: 1.875rem; /* 30px */
+  font-weight: 600;
+  color: #111827;
+}
+
+.summary-card-value.overdue {
+  color: #dc2626; /* Red */
+}
+
+.summary-card-value.total {
+  color: #16a34a; /* Green */
+}
+
+.summary-card-count {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+.active-billings-container {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  /* ATUALIZAÇÃO: Removido padding para o wrapper cuidar disso */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  /* Garante que o container não encolha e o wrapper possa crescer */
+  overflow: hidden;
+}
+
+.active-billings-title {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  padding: 1rem 1.5rem; /* Ajuste no padding */
+  margin: 0;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0; /* Impede que o título encolha */
+}
+
+/* ✅ NOVO: Estilo para o container da lista com scroll */
+.billing-list-wrapper {
+  max-height: 60vh; /* Altura máxima de 60% da tela */
+  overflow-y: auto; /* Adiciona scroll vertical quando necessário */
+  padding: 0 0.5rem 0 1.5rem; /* Espaço para itens e para a barra de scroll */
+}
+
+/* ✅ NOVO: Estilo para mensagem de "nenhuma cobrança" */
+.no-bills-message {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.billing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 1rem 0; /* Padding ajustado para o wrapper */
+  border-bottom: 1px solid #f3f4f6;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -1,0 +1,80 @@
+/*
+ * Estilos para HistoryPage.tsx
+ * Estes estilos são compatíveis com o dashboard-layout.css fornecido.
+ */
+
+.history-page-container {
+  width: 100%;
+}
+
+.history-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1.5rem; /* mb-6 */
+  /* A fonte-família é herdada do .dashboard-layout */
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* * Cada item na lista.
+ * Adaptado do layout em card da imagem para um layout de lista
+ * dentro do .content-wrapper (que já é branco e tem padding).
+ * Usamos uma borda inferior para separar os itens, como na imagem.
+ */
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.25rem 0.25rem; /* py-5 px-1 */
+  border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+}
+
+/* Remove a borda do último item */
+.history-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0.25rem;
+}
+
+.item-column-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* gap-1 */
+  align-items: flex-start;
+}
+
+.item-column-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* gap-1 */
+  align-items: flex-end; /* Alinha o texto à direita */
+  text-align: right;
+}
+
+/* Nome do cliente (ex: "Padaria Central") */
+.item-cliente {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Valor (ex: "R$ 175.00") */
+.item-valor {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Estilo para os metadados (Status, Vencimento) */
+.item-meta {
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* text-gray-500 */
+}
+
+.history-error {
+  color: #dc2626; /* text-red-600 */
+  font-weight: 500;
+}
